@@ -1,8 +1,9 @@
-import Logo from '../../assets/images/logo-s.png'
+import LogoTitile from '../../assets/images/logo-s.png'
 import { Link } from 'react-router-dom'
 import './index.scss'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetter'
+import Logo from './Logo'
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const nameArray = ['i', 'k', 'h', 'i', 'l']
@@ -37,7 +38,7 @@ const Home = () => {
           <br />
           <span className={`${letterClass} _13`}>I</span>
           <span className={`${letterClass} _14`}>'m</span>
-          <img src={Logo} alt="developer" />
+          <img src={LogoTitile} alt="developer" />
           <AnimatedLetters
             letterClass={letterClass}
             strArray={nameArray}
@@ -55,6 +56,7 @@ const Home = () => {
           CONTACT ME
         </Link>
       </div>
+      <Logo />
     </div>
     </>
   )

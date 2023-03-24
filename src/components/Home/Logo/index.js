@@ -2,7 +2,7 @@ import './index.scss'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap-trial'
 import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
-import LogoS from '../../../assets/images/logo-s.png'
+import LogoS from '../../../assets/images/logo-s2.png'
 import { motion } from "framer-motion";
 
 const Logo = () => {
@@ -42,7 +42,7 @@ const pathVariants = {
         opacity: 0,
       },
       {
-        opacity: 1,
+        opacity: 0,
         delay: 4,
         duration: 4,
       }

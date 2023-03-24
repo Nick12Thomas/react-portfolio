@@ -2,6 +2,8 @@ $primary-color: #ffd700;
 
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
+@import 'loaders.css/src/animations/ball-zig-zag-deflect.scss';
+
 
 @font-face {
   font-family: 'Helvetica Neue';
@@ -47,4 +49,5 @@ textarea {
   height: 50px;
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
+  z-index: 9999;
 }

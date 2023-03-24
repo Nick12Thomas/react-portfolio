@@ -8,7 +8,6 @@ import { faAngular, faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fort
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
-
     useEffect(() => {
        setTimeout(() => {
         setLetterClass('text-animate-hover')
@@ -16,6 +15,7 @@ const About = () => {
     }, [])
   return (
     <>
+    <Loader  type="ball-zig-zag-deflect"/>
     <div className="conatiner about-page">
       <div className="text-zone">
         <h1>
@@ -66,7 +66,7 @@ const About = () => {
 
       </div>
     </div>
-    <Loader  type="pacman"/>
+    
     </>
   )
 }

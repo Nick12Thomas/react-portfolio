@@ -52,14 +52,17 @@ const Home = () => {
             idx={22}
           />
         </h1>
-        <h2>Frontend Developer / Backend Developer</h2>
+        <h2>MERN STACK DEVELOPER</h2>
         <Link to="/conatact" className="flat-button">
           CONTACT ME
         </Link>
       </div>
       <Logo />
+
     </div>
+  
     <Loader type="ball-zig-zag-deflect"/>
+    
     </>
   )
 }

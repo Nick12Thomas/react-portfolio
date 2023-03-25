@@ -15,6 +15,9 @@ const Layout = () => {
             <span className='tags bottom-tag-html'>&lt;/html&gt;</span>
 
          </div>
+         <div className='footer'>
+         <footer>© Nikhil S Thomas </footer>
+         </div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import React, { useRef } from 'react';
 import Loader from 'react-loaders'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import AnimatedLetters from '../AnimatedLetter'
 import emailjs from '@emailjs/browser'
 import './index.scss'
@@ -32,9 +33,9 @@ const Contact = () => {
   }
 
 
-  return (
+  return(
     <>
-      <div className="conatiner contact-page">
+      <div className="container contact-page">
         <div className="text-zone">
           <h1>
             <AnimatedLetters
@@ -49,24 +50,24 @@ const Contact = () => {
             questions, don't hesitate to contact me using below form either.
           </p>
           <div className="contact-form">
-            <form ref={ form} onSubmit={sendEmail}>
+            <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input type="text" name="name" placeholder="Name" required />
+                  <input placeholder="Name" type="text" name="name" required />
                 </li>
                 <li className="half">
                   <input
+                    placeholder="Email"
                     type="email"
                     name="email"
-                    placeholder="Email"
                     required
                   />
                 </li>
                 <li>
                   <input
-                    placeholder="Subject "
+                    placeholder="Subject"
                     type="text"
-                    name="Subject"
+                    name="subject"
                     required
                   />
                 </li>
@@ -78,14 +79,32 @@ const Contact = () => {
                   ></textarea>
                 </li>
                 <li>
-                    <input type="submit" className='flat-button' />
+                  <input type="submit" className="flat-button" value="SEND" />
                 </li>
               </ul>
             </form>
           </div>
         </div>
-        <Loader type="ball-zig-zag-deflect" />
+        <div className="info-map">
+         Nikhil S Thomas
+          <br />
+          India
+          <br />
+          New Delhi <br />
+          Pul Pehladhpur 110044 <br />
+          <br />
+          <span className='span-text'> nikhilsthomas123@gmail.com </span>
+        </div>
+        <div className="map-wrap">
+          <MapContainer center={[28.4990,77.2905]} zoom={13}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <Marker position={[28.4990,77.2905]}>
+              <Popup>Nikhil lives here, come over for a plate of momos :)</Popup>
+            </Marker>
+          </MapContainer>
+        </div>
       </div>
+      <Loader type="ball-zig-zag-deflect" />
     </>
   )
 }

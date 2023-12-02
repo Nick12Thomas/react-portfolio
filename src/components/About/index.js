@@ -26,7 +26,7 @@ const About = () => {
           />
         </h1>
         <p>
-          I'm a very ambitious front-end developer looking for a role in an
+          I'm a very ambitious full stack developer looking for a role in an
           established IT company with the opportunity to work with the latest
           technologies on challenging and diverse projects.
         </p>
@@ -36,7 +36,7 @@ const About = () => {
         </p>
         <p>
           If I need to define myself in one sentence that would be a family
-          person, father of a beautiful daughter, a sports fanatic, photography
+          person,  a sports fanatic, iot
           enthusiast, and tech-obsessed!!!
         </p>
       </div>
